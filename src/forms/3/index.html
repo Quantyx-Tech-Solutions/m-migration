@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PRO SE I-589, Application for Asylum and for Withholding of Removal,
+      Relief Under the Convention against Torture.</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 40px;
+        }
+        .form-title {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+        }
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .form-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .form-control, .form-select {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #5a6268;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-secondary mb-3" type="button" onclick="history.back()">← Atrás</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-container">
+        <h1 class="form-title">
+            PRO SE I-589, Application for Asylum and for Withholding of Removal,
+            Relief Under the Convention against Torture.
+        </h1>
+
+        <form action="">
+      <div class="form-step active">
+        <h2>PARTE A</h2>
+        <div class="row">
+          <div class="col">
+            <label class="form-label" for="primerNombre">Primer Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="primerNombre"
+              name="primerNombre"
+            />
+          </div>
+          <div class="col">
+            <label class="form-label" for="segundoNombre">Segundo Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="segundoNombre"
+              name="segundoNombre"
+            />
+          </div>
+          <div class="col">
+            <label class="form-label" for="apellidos">Apellidos</label>
+            <input
+              type="text"
+              class="form-control"
+              id="apellidos"
+              name="apellidos"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label" for="numeroExtranjero"
+              >Numero de extranjero (si tiene)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="numeroExtranjero"
+              name="numeroExtranjero"
+            />
+          </div>
+          <div class="col">
+            <label class="form-label" for="numeroSeguroSocial"
+              >Numero de Seguro Social (si tiene)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="numeroSeguroSocial"
+              name="numeroSeguroSocial"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="otrosNombres"
+            >Otros nombres usados incluyendo alias:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="otrosNombres"
+            name="otrosNombres"
+          />
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="lugarResidencia" class="form-label"
+              >Lugar donde reside físicamente en Estados Unidos</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="lugarResidencia"
+              name="lugarResidencia"
+            />
+          </div>
+          <div class="col">
+            <label for="lugarCorrespondencia" class="form-label"
+              >Lugar donde desea recibir la correspondencia si es diferente al
+              anterior</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="lugarCorrespondencia"
+              name="lugarCorrespondencia"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="fechaNacimiento" class="form-label"
+              >Fecha de nacimiento:</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="fechaNacimiento"
+              name="fechaNacimiento"
+            />
+          </div>
+
+          <div class="col">
+            <label for="paisNacimiento" class="form-label"
+              >País de nacimiento:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="paisNacimiento"
+              name="paisNacimiento"
+            />
+          </div>
+          <div class="col">
+            <label for="ciudad" class="form-label">Ciudad de nacimiento:</label>
+            <input type="text" class="form-control" id="ciudad" name="ciudad" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="nacionalidadActual" class="form-label"
+              >Nacionalidad actual:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nacionalidadActual"
+              name="nacionalidadActual"
+            />
+          </div>
+          <div class="col">
+            <label for="nacionalidadNacimiento" class="form-label"
+              >Nacionalidad al nacer:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nacionalidadNacimiento"
+              name="nacionalidadNacimiento"
+            />
+          </div>
+          <div class="col">
+            <label for="razaEtnia" class="form-label"
+              >Raza, etnia o grupo racial:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="razaEtnia"
+              name="razaEtnia"
+            />
+          </div>
+          <div class="col">
+            <label for="religion" class="form-label"
+              >Religión que practica:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="religion"
+              name="religion"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="estadoMarital">Estado marital</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="estadoMarital"
+            name="estadoMarital"
+          >
+            <option selected>Seleccione una opción</option>
+            <option value="1">soltero</option>
+            <option value="2">casado</option>
+            <option value="3">divorciado</option>
+            <option value="4">viudo</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="genero"
+            id="generoFemenino"
+          />
+          <label class="form-check-label" for="generoFemenino">
+            Femenino
+          </label>
+
+          <input
+            class="form-check-input"
+            type="radio"
+            name="genero"
+            id="generoMasculino"
+          />
+          <label class="form-check-label" for="generoMasculino">
+            Masculino
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="procesoCorte"
+            id="checkNever"
+          />
+          <label class="form-check-label" for="checkNever">
+            Nunca he estado en ningún proceso en Corte de inmigración
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="procesoCorte"
+            id="checkEnProceso"
+          />
+          <label class="form-check-label" for="checkEnProceso">
+            En estos momentos estoy en un proceso en Corte de inmigración
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="procesoCorte"
+            id="checkNoProceso"
+          />
+          <label class="form-check-label" for="checkNoProceso">
+            En estos momentos no estoy en ningún proceso en la Corte de
+            inmigración, pero estuve en el pasado.
+          </label>
+        </div>
+
+        <div class="mb-3">
+          <label for="fechaUltimaSalida" class="form-label"
+            >Fecha de la última vez que dejo su país de origen</label
+          ><input
+            type="date"
+            class="form-control"
+            id="fechaUltimaSalida"
+            name="fechaUltimaSalida"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="numeroI94" class="form-label"
+            >Numero de su I-94 (si tiene)</label
+          ><input
+            type="text"
+            class="form-control"
+            id="numeroI94"
+            name="numeroI94"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            Lista de cada una de sus entradas a los Estados Unidos comenzando
+            por la más reciente.
+          </label>
+
+          <!-- Contenedor donde se agregan las filas -->
+          <div id="entries-container">
+            <!-- Primera fila SIN botón eliminar -->
+            <div class="row mb-3 entry">
+              <div class="col">
+                <label class="form-label">Fecha:</label>
+                <input type="date" class="form-control" />
+              </div>
+              <div class="col">
+                <label class="form-label">Lugar:</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col">
+                <label class="form-label">Estatus:</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col">
+                <label class="form-label">Fecha de Expiración:</label>
+                <input type="date" class="form-control" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón para agregar más -->
+          <button type="button" id="add-entry" class="btn btn-primary mt-2">
+            + Agregar otro
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="paisEmision" class="form-label"
+            >En qué país fue emitido su pasaporte o documento de viaje</label
+          ><input
+            type="text"
+            class="form-control"
+            id="paisEmision"
+            name="paisEmision"
+          />
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="numeroPasaporte" class="form-label"
+              >Numero de pasaporte o documento de viaje</label
+            ><input
+              type="text"
+              class="form-control"
+              id="numeroPasaporte"
+              name="numeroPasaporte"
+            />
+          </div>
+          <div class="col">
+            <label for="fechaExpiracion" class="form-label"
+              >Fecha en que expira</label
+            ><input
+              type="text"
+              class="form-control"
+              id="fechaExpiracion"
+              name="fechaExpiracion"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="lenguaNatal" class="form-label"
+              >Cuál es tu lengua natal</label
+            ><input
+              type="text"
+              class="form-control"
+              id="lenguaNatal"
+              name="lenguaNatal"
+            />
+          </div>
+          <div class="col">
+            <label for="sabeIngles" class="form-label">¿Sabe inglés?</label
+            ><input
+              type="text"
+              class="form-control"
+              id="sabeIngles"
+              name="sabeIngles"
+            />
+          </div>
+          <div class="col">
+            <label for="otroIdioma" class="form-label"
+              >¿Que otro idioma usted habla?</label
+            ><input
+              type="text"
+              class="form-control"
+              id="otroIdioma"
+              name="otroIdioma"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="tieneHijos" class="form-label">¿Tiene hijos?</label
+            ><input
+              type="text"
+              class="form-control"
+              id="tieneHijos"
+              name="tieneHijos"
+            />
+          </div>
+          <div class="col">
+            <label for="cuantosHijos" class="form-label"
+              >¿Cuántos hijos tiene?</label
+            ><input
+              type="text"
+              class="form-control"
+              id="cuantosHijos"
+              name="cuantosHijos"
+            />
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary next-step">
+          Siguiente
+        </button>
+      </div>
+
+      <div class="form-step">
+        <h2>PARTE A.II</h2>
+        <span><b>(SU CONYUGE)</b></span>
+
+        <div class="row">
+          <div class="col">
+            <label for="primerNombreConyuge" class="form-label"
+              >Primer Nombre:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="primerNombreConyuge"
+              name="primerNombreConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="segundoNombreConyuge" class="form-label"
+              >Segundo Nombre:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="segundoNombreConyuge"
+              name="segundoNombreConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="apellidosConyuge" class="form-label">Apellidos:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="apellidosConyuge"
+              name="apellidosConyuge"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="numeroExtranjeroConyuge" class="form-label"
+              >Número de extranjero:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="numeroExtranjeroConyuge"
+              name="numeroExtranjeroConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="numeroPasaporteConyuge" class="form-label"
+              >Número de pasaporte:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="numeroPasaporteConyuge"
+              name="numeroPasaporteConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="ssnConyuge" class="form-label">SSN:(si tiene):</label
+            ><input
+              type="text"
+              class="form-control"
+              id="ssnConyuge"
+              name="ssnConyuge"
+            />
+          </div>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="checkEsCasado"
+          />
+          <label class="form-check-label" for="checkEsCasado">
+            Es casado ?
+          </label>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="fechaMatrimonioConyuge" class="form-label"
+              >Fecha del matrimonio</label
+            ><input
+              type="text"
+              class="form-control"
+              id="fechaMatrimonioConyuge"
+              name="fechaMatrimonioConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="lugarMatrimonioConyuge" class="form-label"
+              >Lugar del matrimonio</label
+            ><input
+              type="text"
+              class="form-control"
+              id="lugarMatrimonioConyuge"
+              name="lugarMatrimonioConyuge"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="ciudadNacimientoConyuge" class="form-label"
+              >Ciudad de nacimiento</label
+            ><input
+              type="text"
+              class="form-control"
+              id="ciudadNacimientoConyuge"
+              name="ciudadNacimientoConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="nacionalidadConyuge" class="form-label"
+              >Nacionalidad</label
+            ><input
+              type="text"
+              class="form-control"
+              id="nacionalidadConyuge"
+              name="nacionalidadConyuge"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="razaEtniaConyuge" class="form-label"
+            >Raza, etnia o grupo racial:</label
+          ><input
+            type="text"
+            class="form-control"
+            id="razaEtniaConyuge"
+            name="razaEtniaConyuge"
+          />
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="estadoResidenciaConyuge" class="form-label"
+              >Se encuentra actualmente en los Estados Unidos</label
+            >
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="Si"
+                name="estadoResidenciaConyuge"
+                value="Si"
+              />
+              <label for="Si">Si</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="No"
+                name="estadoResidenciaConyuge"
+                value="No"
+              />
+              <label for="No">No</label>
+            </div>
+          </div>
+          <div class="col">
+            <label for="fechaUltimaEntradaConyuge" class="form-label"
+              >Fecha de la última entrada a Estados Unidos</label
+            ><input
+              type="date"
+              class="form-control"
+              id="fechaUltimaEntradaConyuge"
+              name="fechaUltimaEntradaConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="lugarUltimaEntradaConyuge" class="form-label"
+              >Lugar de la última entrada a Estados Unidos</label
+            ><input
+              type="text"
+              class="form-control"
+              id="lugarUltimaEntradaConyuge"
+              name="lugarUltimaEntradaConyuge"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="estatusEntradaConyuge" class="form-label"
+              >Estatus con que entro</label
+            ><input
+              type="text"
+              class="form-control"
+              id="estatusEntradaConyuge"
+              name="estatusEntradaConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="estatusActualConyuge" class="form-label"
+              >Estatus actual</label
+            ><input
+              type="text"
+              class="form-control"
+              id="estatusActualConyuge"
+              name="estatusActualConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="numeroI94Conyuge" class="form-label"
+              >Numero de su I-94 (si tiene)</label
+            ><input
+              type="text"
+              class="form-control"
+              id="numeroI94Conyuge"
+              name="numeroI94Conyuge"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="fechaExpiracionAutorizacionConyuge" class="form-label"
+            >Fecha de expiración de la autorización de estancia</label
+          ><input
+            type="date"
+            class="form-control"
+            id="fechaExpiracionAutorizacionConyuge"
+            name="fechaExpiracionAutorizacionConyuge"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="procesoCorteInmigracionConyuge" class="form-label"
+            >¿Ha estado en proceso en Corte de inmigración?
+          </label>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="Si"
+              name="procesoCorteInmigracionConyuge"
+              value="Si"
+            />
+            <label for="Si">Si</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="No"
+              name="procesoCorteInmigracionConyuge"
+              value="No"
+            />
+            <label for="No">No</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="estadoAnteriorConyuge" class="form-label"
+            >Ha estado anteriormente en los Estados Unidos (si es “SI” diga
+            fecha y lugar de su entrada anterior)</label
+          >
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="Si"
+              name="estadoAnteriorConyuge"
+              value="Si"
+            />
+            <label for="Si">Si</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="No"
+              name="estadoAnteriorConyuge"
+              value="No"
+            />
+            <label for="No">No</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="fechaEntradaAnteriorConyuge" class="form-label"
+              >Fecha de entrada anterior</label
+            ><input
+              type="text"
+              class="form-control"
+              id="fechaEntradaAnteriorConyuge"
+              name="fechaEntradaAnteriorConyuge"
+            />
+          </div>
+          <div class="col">
+            <label for="lugarEntradaAnteriorConyuge" class="form-label"
+              >Lugar de entrada anterior</label
+            ><input
+              type="text"
+              class="form-control"
+              id="lugarEntradaAnteriorConyuge"
+              name="lugarEntradaAnteriorConyuge"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="incluidaAplicacionConyuge" class="form-label"
+            >¿Está incluida(o) en esta aplicación con usted?</label
+          >
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="Si"
+              name="incluidaAplicacionConyuge"
+              value="Si"
+            />
+            <label for="Si">Si</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="No"
+              name="incluidaAplicacionConyuge"
+              value="No"
+            />
+            <label for="No">No</label>
+          </div>
+        </div>
+
+        <span><b>(SUS HIJOS)</b></span>
+
+        <div class="row">
+          <div class="col">
+            <label for="primerNombreHijo" class="form-label"
+              >Primer Nombre:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="primerNombreHijo"
+              name="primerNombreHijo"
+            />
+          </div>
+          <div class="col">
+            <label for="segundoNombreHijo" class="form-label"
+              >Segundo Nombre:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="segundoNombreHijo"
+              name="segundoNombreHijo"
+            />
+          </div>
+          <div class="col">
+            <label for="apellidosHijo" class="form-label">Apellidos:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="apellidosHijo"
+              name="apellidosHijo"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="numeroExtranjeroHijo" class="form-label"
+              >Número de extranjero:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="numeroExtranjeroHijo"
+              name="numeroExtranjeroHijo"
+            />
+          </div>
+          <div class="col">
+            <label for="numeroPasaporteHijo" class="form-label"
+              >Número de pasaporte:</label
+            ><input
+              type="text"
+              class="form-control"
+              id="numeroPasaporteHijo"
+              name="numeroPasaporteHijo"
+            />
+          </div>
+          <div class="col">
+            <label for="ssnHijo" class="form-label">SSN:(si tiene):</label
+            ><input
+              type="text"
+              class="form-control"
+              id="ssnHijo"
+              name="ssnHijo"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="fechaNacimientoHijo" class="form-label"
+              >Fecha de nacimiento</label
+            ><input
+              type="text"
+              class="form-control"
+              id="fechaNacimientoHijo"
+              name="fechaNacimientoHijo"
+            />
+          </div>
+          <div class="col">
+            <label for="paisNacimientoHijo" class="form-label"
+              >Pais de nacimiento</label
+            ><input
+              type="text"
+              class="form-control"
+              id="paisNacimientoHijo"
+              name="paisNacimientoHijo"
+              name=""
+            />
+          </div>
+
+          <div class="col">
+            <label for="ciudadNacimientoHijo" class="form-label"
+              >Ciudad de nacimiento</label
+            ><input
+              type="text"
+              class="form-control"
+              id="ciudadNacimientoHijo"
+              name="ciudadNacimientoHijo"
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="nacionalidadHijo" class="form-label">Nacionalidad</label
+          ><input
+            type="text"
+            class="form-control"
+            id="nacionalidadHijo"
+            name="nacionalidadHijo"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="razaEtniaConyuge" class="form-label"
+            >Raza, etnia o grupo racial:</label
+          ><input
+            type="text"
+            class="form-control"
+            id="razaEtniaConyuge"
+            name="razaEtniaConyuge"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="estadoMarital">Estado marital</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="estadoMarital"
+            name="estadoMarital"
+          >
+            <option selected>Seleccione una opción</option>
+            <option value="1">soltero</option>
+            <option value="2">casado</option>
+            <option value="3">divorciado</option>
+            <option value="4">viudo</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="estadoResidenciaHijo" class="form-label"
+              >Se encuentra actualmente en los Estados Unidos</label
+            >
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="Si"
+                name="estadoResidenciaHijo"
+                value="Si"
+              />
+              <label for="Si">Si</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="No"
+                name="estadoResidenciaHijo"
+                value="No"
+              />
+              <label for="No">No</label>
+            </div>
+          </div>
+          <div class="col">
+            <label for="fechaUltimaEntradaHijo" class="form-label"
+              >Fecha de la última entrada a Estados Unidos</label
+            ><input
+              type="date"
+              class="form-control"
+              id="fechaUltimaEntradaHijo"
+              name="fechaUltimaEntradaHijo"
+            />
+          </div>
+          <div class="col">
+            <label for="lugarUltimaEntradaHijo" class="form-label"
+              >Lugar de la última entrada a Estados Unidos</label
+            ><input
+              type="text"
+              class="form-control"
+              id="lugarUltimaEntradaHijo"
+              name="lugarUltimaEntradaHijo"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="estatusEntradaHijo" class="form-label"
+              >Estatus con que entro</label
+            ><input
+              type="text"
+              class="form-control"
+              id="estatusEntradaHijo"
+              name="estatusEntradaHijo"
+            />
+          </div>
+          <div class="col">
+            <label for="estatusActualHijo" class="form-label"
+              >Estatus actual</label
+            ><input
+              type="text"
+              class="form-control"
+              id="estatusActualHijo"
+              name="estatusActualHijo"
+            />
+          </div>
+          <div class="col">
+            <label for="numeroI94Hijo" class="form-label"
+              >Numero de su I-94 (si tiene)</label
+            ><input
+              type="text"
+              class="form-control"
+              id="numeroI94Hijo"
+              name="numeroI94Hijo"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="fechaExpiracionAutorizacionHijo" class="form-label"
+            >Fecha de expiración de la autorización de estancia</label
+          ><input
+            type="date"
+            class="form-control"
+            id="fechaExpiracionAutorizacionHijo"
+            name="fechaExpiracionAutorizacionHijo"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="procesoCorteInmigracionHijo" class="form-label"
+            >¿Ha estado en proceso en Corte de inmigración?
+          </label>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="Si"
+              name="procesoCorteInmigracionHijo"
+              value="Si"
+            />
+            <label for="Si">Si</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="No"
+              name="procesoCorteInmigracionHijo"
+              value="No"
+            />
+            <label for="No">No</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="estadoAnteriorHijo" class="form-label"
+            >Ha estado anteriormente en los Estados Unidos (si es “SI” diga
+            fecha y lugar de su entrada anterior)</label
+          >
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="Si"
+              name="estadoAnteriorHijo"
+              value="Si"
+            />
+            <label for="Si">Si</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="No"
+              name="estadoAnteriorHijo"
+              value="No"
+            />
+            <label for="No">No</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="fechaEntradaAnteriorHijo" class="form-label"
+              >Fecha de entrada anterior</label
+            ><input
+              type="text"
+              class="form-control"
+              id="fechaEntradaAnteriorHijo"
+              name="fechaEntradaAnteriorHijo"
+            />
+          </div>
+          <div class="col">
+            <label for="lugarEntradaAnteriorHijo" class="form-label"
+              >Lugar de entrada anterior</label
+            ><input
+              type="text"
+              class="form-control"
+              id="lugarEntradaAnteriorHijo"
+              name="lugarEntradaAnteriorHijo"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="incluidaAplicacionHijo" class="form-label"
+            >¿Está incluida(o) en esta aplicación con usted?</label
+          >
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="Si"
+              name="incluidaAplicacionHijo"
+              value="Si"
+            />
+            <label for="Si">Si</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="No"
+              name="incluidaAplicacionHijo"
+              value="No"
+            />
+            <label for="No">No</label>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-secondary prev-step">
+          Anterior
+        </button>
+        <button type="button" class="btn btn-primary next-step">
+          Siguiente
+        </button>
+      </div>
+
+      <div class="form-step">
+        <h2>PARTE A.III</h2>
+
+        <button type="button" class="btn btn-secondary prev-step">
+          Anterior
+        </button>
+        <button type="button" class="btn btn-primary next-step">
+          Siguiente
+        </button>
+      </div>
+
+      <div class="form-step">
+        <h2>PARTE B</h2>
+
+        <div class="mb-3">
+          <label for="parteBpregunta1" class="form-label">
+            1. ¿Por qué solicita el asilo o la retención de expulsión según la
+            sección 241 (b) (3) del INA, o para la retención de expulsión según
+            la Convención contra la Tortura?
+          </label>
+
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="parteBpregunta1"
+            name="parteBpregunta1"
+          >
+            <option selected>Seleccione una opción</option>
+            <option value="1">Raza</option>
+            <option value="2">Religion</option>
+            <option value="3">Nacionalidad</option>
+            <option value="4">Opinion política</option>
+            <option value="4">Miembro de un grupo social en particular</option>
+            <option value="4">Convención de la tortura</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="parteBpregunta2" class="form-label">
+            A. Usted, o su familia, o amistades cercanas o colegas, ¿ha
+            experimentado algún daño, maltrato o amenazas en el pasado causado
+            por alguien?
+          </label>
+
+          <span>Si la respuesta es SÍ, indique: </span>
+          <ul>
+            <li>¿Qué paso?</li>
+            <li>¿Cuándo ocurrió el Daño o Maltrato o las amenazas?</li>
+            <li>¿Quién causó el daño, o maltrato o las amenazas?</li>
+            <li>
+              Porque Usted cree que el daño, las amenazas, ¿o el maltrato
+              sucedió?
+            </li>
+          </ul>
+          <textarea
+            class="form-control"
+            name="parteBpregunta2"
+            id="parteBpregunta2"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="parteBpregunta3" class="form-label">
+            B. Usted teme por daños o maltratos si usted regresara a su país de
+            orígen?
+          </label>
+
+          <span>Si la respuesta es SÍ, indique:</span>
+          <ul>
+            <li>¿Qué daño o amenazas usted teme?</li>
+            <li>¿Cuándo ocurrió el Daño o Maltrato o las amenazas?</li>
+            <li>¿Quién cree que podría dañarlo o amenazar a usted?</li>
+            <li>¿Porque Usted cree que podría sufrir un daño o amenaza?</li>
+          </ul>
+
+          <textarea
+            class="form-control"
+            name="parteBpregunta3"
+            id="parteBpregunta3"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="parteBpregunta4" class="form-label">
+            2. Usted o miembros de su familia alguna vez ha sido acusado,
+            demandado, arrestado, detenido, interrogado, condenado o privado de
+            libertad en algún país que no sea los Estados Unidos? </label
+          ><textarea
+            class="form-control"
+            name="parteBpregunta4"
+            id="parteBpregunta4"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="parteBpregunta5" class="form-label">
+            3. Usted o miembros de su familia alguna vez han pertenecido o se
+            han asociado con organizaciones o grupos en su país de origen, tales
+            como, pero no limitado a, un partido político, grupo de estudiantes,
+            sindicato, organización religiosa, militar o paramilitar, patrulla
+            civil, organización guerrillera, etnia, grupo de derechos humanos, o
+            la prensa o los medios de comunicación.
+          </label>
+
+          <span>Si la respuesta es SÍ, indique: </span>
+          <p>
+            A. Describa por cada persona el tipo de participación, desde que
+            tiempo son de esa organización o actividad.
+          </p>
+
+          <textarea
+            class="form-control"
+            name="parteBpregunta5"
+            id="parteBpregunta5"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="parteBpregunta6" class="form-label">
+            B. ¿Usted o miembros de su familia continúan participando de alguna
+            manera en estas organizaciones o grupos? </label
+          ><textarea
+            class="form-control"
+            name="parteBpregunta6"
+            id="parteBpregunta6"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="parteBpregunta7" class="form-label">
+            4. Tiene usted temor de ser sometido a tortura en su pais de origen
+            o en cualquier otro pais al cual usted pueda regresar? </label
+          ><textarea
+            class="form-control"
+            name="parteBpregunta7"
+            id="parteBpregunta7"
+          ></textarea>
+        </div>
+
+        <button type="button" class="btn btn-secondary prev-step">
+          Anterior
+        </button>
+        <button type="button" class="btn btn-primary next-step">
+          Siguiente
+        </button>
+      </div>
+
+      <div class="form-step ">
+        <h2>PARTE C</h2>
+
+        <div class="container mt-4">
+          <div class="mb-3">
+            <label for="parteCpregunta1" class="form-label">
+              1. ¿Usted, su cónyuge, su hijo (s), sus padres o sus hermanos han
+              solicitado al Gobierno U? ¿S la condición de refugiado, asilo o
+              withholding of removal? </label
+            ><textarea
+              name="parteCpregunta1"
+              id="parteCpregunta1"
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="parteCpregunta2" class="form-label">
+              2. Después de dejar el país desde el que está reclamando asilo,
+             </label
+            >
+            <span> A.¿usted o su cónyuge o hijo (s) que están ahora en los Estados
+              Unidos viajan a través de o residen en cualquier otro país antes
+              de entrar en los Estados Unidos? </span>
+            
+            <textarea
+              name="parteCpregunta2"
+              id="parteCpregunta2"
+              class="form-control"
+            ></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="parteCpregunta3" class="form-label">
+              B. ¿Usted, su cónyuge, su hijo (s), u otros miembros de la
+              familia, como sus padres o hermanos, alguna vez ha solicitado o
+              recibido algún estatus legal en cualquier país distinto de aquél
+              desde el que está ahora solicitando asilo? </label
+            ><textarea
+              name="parteCpregunta3"
+              id="parteCpregunta3"
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="parteCpregunta4" class="form-label">
+              3. ¿Usted, su cónyuge, su hijo (a) alguna vez ha ordenado,
+              incitado, asistido o no participado en causar un daño o
+              sufrimiento a cualquier persona a causa de su raza, religión,
+              nacionalidad, pertenencia a determinado grupo social, o la
+              creencia en una determinada opinión política? </label
+            ><textarea
+              name="parteCpregunta4"
+              id="parteCpregunta4"
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="parteCpregunta5" class="form-label">
+              4. ¿Después de que usted dejó el país en el que usted sufrió o
+              temía daño, ha usted retornado a ese país? </label
+            ><textarea
+              name="parteCpregunta5"
+              id="parteCpregunta5"
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="parteCpregunta6" class="form-label">
+              5. ¿Está usted presentando esta aplicación más de un año después
+              de su última llegada a los Estados Unidos? </label
+            ><textarea
+              name="parteCpregunta6"
+              id="parteCpregunta6"
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="parteCpregunta7" class="form-label">
+              6.Usted o algún miembro de su familia han incluido en la solicitud
+              que alguna vez hayan cometido algún delito y/o sido arrestado,
+              acusado, demandado, o condenado por cualquier crimen en los
+              Estados Unidos? </label
+            ><textarea
+              name="parteCpregunta7"
+              id="parteCpregunta7"
+              class="form-control"
+            ></textarea>
+          </div>
+          <h5>Firma Aplicante:</h5>
+          <canvas
+            id="signature-pad"
+            class="border border-2 rounded w-100"
+            height="100"
+          ></canvas>
+          
+
+          <div class="mt-2">
+            <button id="clear" class="btn btn-secondary">Limpiar</button>
+            <button id="save" class="btn btn-success">Guardar</button>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end gap-2">
+          <button type="button" class="btn btn-secondary prev-step">
+            Anterior
+          </button>
+          <button type="submit" class="btn btn-success">Enviar</button>
+        </div>
+      </div>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>¿Necesitas ayuda con tu formulario?</p>
+                    <p>📧 Email: info@daniaformularios.com</p>
+                    <p>📞 Teléfono: (555) 123-4567</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Síguenos en Redes Sociales</h5>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Dania Formularios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+   <script>
+  const canvas = document.getElementById("signature-pad");
+  const signaturePad = new SignaturePad(canvas, {
+    minWidth: 1,
+    maxWidth: 2,
+    penColor: "black"
+  });
+
+  function resizeCanvas() {
+    const ratio = Math.max(window.devicePixelRatio || 1, 1);
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width > 0 && rect.height > 0) {
+      canvas.width = rect.width * ratio;
+      canvas.height = rect.height * ratio;
+      canvas.getContext("2d").scale(ratio, ratio);
+      signaturePad.clear();
+    }
+  }
+
+  // ⚡ Ajusta cuando la ventana cambia tamaño
+  window.addEventListener("resize", resizeCanvas);
+
+  // ⚡ Ajusta cada vez que activas un paso
+  document.querySelectorAll(".next-step, .prev-step").forEach(btn => {
+    btn.addEventListener("click", () => {
+      setTimeout(resizeCanvas, 50); // un pequeño delay para que el paso esté visible
+    });
+  });
+
+  // Botones de limpiar y guardar
+  document.getElementById("clear").addEventListener("click", (e) => {
+    e.preventDefault();
+    signaturePad.clear();
+  });
+
+  document.getElementById("save").addEventListener("click", (e) => {
+    e.preventDefault();
+    if (signaturePad.isEmpty()) {
+      alert("Por favor firme antes de guardar.");
+    } else {
+      const dataURL = signaturePad.toDataURL();
+      console.log("Firma base64:", dataURL);
+    }
+  });
+</script>
+
+   
+
+    <script>
+      const steps = document.querySelectorAll(".form-step");
+      const nextBtns = document.querySelectorAll(".next-step");
+      const prevBtns = document.querySelectorAll(".prev-step");
+
+      let currentStep = 0;
+
+      nextBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          steps[currentStep].classList.remove("active");
+          currentStep++;
+          steps[currentStep].classList.add("active");
+        });
+      });
+
+      prevBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          steps[currentStep].classList.remove("active");
+          currentStep--;
+          steps[currentStep].classList.add("active");
+        });
+      });
+    </script>
+
+
+ <script>
+      const container = document.getElementById("entries-container");
+      const addBtn = document.getElementById("add-entry");
+
+      addBtn.addEventListener("click", () => {
+        // Clonamos la primera fila
+        const firstEntry = container.querySelector(".entry");
+        const newEntry = firstEntry.cloneNode(true);
+
+        // Limpiamos los valores de los inputs
+        newEntry
+          .querySelectorAll("input")
+          .forEach((input) => (input.value = ""));
+
+        // Agregamos un botón eliminar solo a los nuevos
+        const removeCol = document.createElement("div");
+        removeCol.className = "col-auto d-flex align-items-end";
+        removeCol.innerHTML = `<button type="button" class="btn btn-danger remove-entry">✕</button>`;
+        newEntry.appendChild(removeCol);
+
+        // Evento para borrar la fila
+        removeCol
+          .querySelector(".remove-entry")
+          .addEventListener("click", () => {
+            newEntry.remove();
+          });
+
+        container.appendChild(newEntry);
+      });
+    </script>
+  </body>
+</html>

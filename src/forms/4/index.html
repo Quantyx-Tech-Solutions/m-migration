@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTAKE FORM VAWA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 40px;
+        }
+        .form-title {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .form-section h4 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .form-control, .form-select {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        .required-docs {
+            background-color: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .required-docs h5 {
+            color: #0c5460;
+            margin-bottom: 15px;
+        }
+        .required-docs ol {
+            margin-bottom: 0;
+        }
+        .required-docs li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-secondary mb-3" type="button" onclick="history.back()">← Atrás</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-container">
+        <h2 class="form-title">INTAKE FORM VAWA</h2>
+        <p>Solicitud de visa para víctimas de abuso por parte de padres, hijos o cónyuges residente o ciudadano americano</p>
+        
+        <form id="intake_vawa" name="intake_vawa" class="needs-validation" novalidate method="post" action="<?= pubUrl ?>">
+
+      <h4>INFORMACIÓN SOBRE LA VÍCTIMA</h4>
+
+      <div class="mb-3">
+        <label for="nombreCompleto" class="form-label">Nombre completo del solicitante *</label>
+        <input type="text" name="nombreCompleto" id="nombreCompleto" class="form-control" placeholder="Nombre Completo" required>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="fechaNacimiento" class="form-label">Fecha de nacimiento *</label>
+          <input type="date" name="fechaNacimiento" id="fechaNacimiento" class="form-control" required>
+        </div>
+        <div class="col">
+          <label for="lugarNacimiento" class="form-label">Lugar de nacimiento *</label>
+          <input type="text" name="lugarNacimiento" id="lugarNacimiento" class="form-control" placeholder="Ciudad, País" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="direccionActual" class="form-label">Dirección actual *</label>
+        <input type="text" name="direccionActual" id="direccionActual" class="form-control" placeholder="Dirección completa" required>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="telefono" class="form-label">Teléfono *</label>
+          <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="Número de teléfono" required>
+        </div>
+        <div class="col">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="email@ejemplo.com">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="numeroA" class="form-label">Número A (si tiene)</label>
+        <input type="text" name="numeroA" id="numeroA" class="form-control" placeholder="A-Number">
+      </div>
+
+      <div class="mb-3">
+        <label for="numeroSeguroSocial" class="form-label">Número de Seguro Social (si tiene)</label>
+        <input type="text" name="numeroSeguroSocial" id="numeroSeguroSocial" class="form-control" placeholder="SSN">
+      </div>
+
+      <hr>
+
+      <h4>INFORMACIÓN SOBRE EL ABUSADOR</h4>
+
+      <div class="mb-3">
+        <label for="nombreAbusador" class="form-label">Nombre completo del abusador *</label>
+        <input type="text" name="nombreAbusador" id="nombreAbusador" class="form-control" placeholder="Nombre del abusador" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="relacionAbusador" class="form-label">Relación con el abusador *</label>
+        <select name="relacionAbusador" id="relacionAbusador" class="form-select" required>
+          <option value="">Seleccione una opción</option>
+          <option value="esposo">Esposo/Esposa</option>
+          <option value="padre">Padre</option>
+          <option value="madre">Madre</option>
+          <option value="hijo">Hijo/Hija</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="estatusMigratorioAbusador" class="form-label">Estatus migratorio del abusador *</label>
+        <select name="estatusMigratorioAbusador" id="estatusMigratorioAbusador" class="form-select" required>
+          <option value="">Seleccione una opción</option>
+          <option value="ciudadano">Ciudadano estadounidense</option>
+          <option value="residente">Residente permanente</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="numeroAAbusador" class="form-label">Número A del abusador (si aplica)</label>
+        <input type="text" name="numeroAAbusador" id="numeroAAbusador" class="form-control" placeholder="A-Number del abusador">
+      </div>
+
+      <hr>
+
+      <h4>INFORMACIÓN SOBRE EL ABUSO</h4>
+
+      <div class="mb-3">
+        <label for="tipoAbuso" class="form-label">Tipo de abuso sufrido (puede seleccionar múltiples opciones) *</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="tipoAbuso[]" value="fisico" id="abusoFisico">
+          <label class="form-check-label" for="abusoFisico">Abuso físico</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="tipoAbuso[]" value="emocional" id="abusoEmocional">
+          <label class="form-check-label" for="abusoEmocional">Abuso emocional/psicológico</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="tipoAbuso[]" value="sexual" id="abusoSexual">
+          <label class="form-check-label" for="abusoSexual">Abuso sexual</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="tipoAbuso[]" value="economico" id="abusoEconomico">
+          <label class="form-check-label" for="abusoEconomico">Abuso económico</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="descripcionAbuso" class="form-label">Descripción detallada del abuso *</label>
+        <textarea class="form-control" id="descripcionAbuso" name="descripcionAbuso" rows="4" placeholder="Describa los incidentes de abuso, fechas aproximadas, y cualquier detalle relevante" required></textarea>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="fechaInicioAbuso" class="form-label">Fecha aproximada de inicio del abuso</label>
+          <input type="date" name="fechaInicioAbuso" id="fechaInicioAbuso" class="form-control">
+        </div>
+        <div class="col">
+          <label for="fechaFinAbuso" class="form-label">Fecha aproximada de fin del abuso</label>
+          <input type="date" name="fechaFinAbuso" id="fechaFinAbuso" class="form-control">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="documentosEvidencia" class="form-label">Documentos de evidencia disponibles</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="documentosEvidencia[]" value="reportesPolicia" id="reportesPolicia">
+          <label class="form-check-label" for="reportesPolicia">Reportes de policía</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="documentosEvidencia[]" value="ordenesProteccion" id="ordenesProteccion">
+          <label class="form-check-label" for="ordenesProteccion">Órdenes de protección</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="documentosEvidencia[]" value="documentosMedicos" id="documentosMedicos">
+          <label class="form-check-label" for="documentosMedicos">Documentos médicos</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="documentosEvidencia[]" value="testimonios" id="testimonios">
+          <label class="form-check-label" for="testimonios">Testimonios de testigos</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="documentosEvidencia[]" value="otros" id="otrosDocumentos">
+          <label class="form-check-label" for="otrosDocumentos">Otros</label>
+        </div>
+      </div>
+
+      <hr>
+
+      <h4>INFORMACIÓN ADICIONAL</h4>
+
+      <div class="mb-3">
+        <label for="hijosComunes" class="form-label">¿Tiene hijos en común con el abusador?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="hijosComunes" id="hijosComunesSi" value="si">
+          <label class="form-check-label" for="hijosComunesSi">Sí</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="hijosComunes" id="hijosComunesNo" value="no">
+          <label class="form-check-label" for="hijosComunesNo">No</label>
+        </div>
+      </div>
+
+      <div class="mb-3" id="infoHijos" style="display: none;">
+        <label for="numeroHijos" class="form-label">Número de hijos en común</label>
+        <input type="number" name="numeroHijos" id="numeroHijos" class="form-control" min="1">
+      </div>
+
+      <div class="mb-3">
+        <label for="estatusMigratorioActual" class="form-label">Su estatus migratorio actual</label>
+        <select name="estatusMigratorioActual" id="estatusMigratorioActual" class="form-select">
+          <option value="">Seleccione una opción</option>
+          <option value="indocumentado">Indocumentado</option>
+          <option value="visaTemporal">Visa temporal</option>
+          <option value="residenteCondicional">Residente condicional</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="solicitudAnterior" class="form-label">¿Ha solicitado anteriormente beneficios bajo VAWA?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="solicitudAnterior" id="solicitudAnteriorSi" value="si">
+          <label class="form-check-label" for="solicitudAnteriorSi">Sí</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="solicitudAnterior" id="solicitudAnteriorNo" value="no">
+          <label class="form-check-label" for="solicitudAnteriorNo">No</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="observaciones" class="form-label">Observaciones adicionales</label>
+        <textarea class="form-control" id="observaciones" name="observaciones" rows="3" placeholder="Cualquier información adicional que considere relevante"></textarea>
+      </div>
+
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      
+      <hr>
+      
+      <h5>DOCUMENTOS REQUERIDOS:</h5>
+      <ol>
+        <li>Formulario I-360 completado</li>
+        <li>Evidencia del abuso (reportes policiales, órdenes de protección, etc.)</li>
+        <li>Evidencia de la relación con el abusador (certificado de matrimonio, etc.)</li>
+        <li>Evidencia del estatus migratorio del abusador</li>
+        <li>Declaraciones juradas de testigos</li>
+        <li>Documentos de identidad del solicitante</li>
+      </ol>
+
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Mostrar/ocultar información de hijos
+      document.querySelectorAll('input[name="hijosComunes"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+          const infoHijos = document.getElementById('infoHijos');
+          if (this.value === 'si') {
+            infoHijos.style.display = 'block';
+          } else {
+            infoHijos.style.display = 'none';
+          }
+        });
+      });
+    </script>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>¿Necesitas ayuda con tu formulario?</p>
+                    <p>📧 Email: info@daniaformularios.com</p>
+                    <p>📞 Teléfono: (555) 123-4567</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Síguenos en Redes Sociales</h5>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Dania Formularios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

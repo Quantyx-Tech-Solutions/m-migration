@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Immigrant Juvenile Status (SIJ)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 40px;
+        }
+        .form-title {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .form-section h4 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .form-control, .form-select {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        .required-docs {
+            background-color: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .required-docs h5 {
+            color: #0c5460;
+            margin-bottom: 15px;
+        }
+        .required-docs ol {
+            margin-bottom: 0;
+        }
+        .required-docs li {
+            margin-bottom: 5px;
+        }
+    </style>
+  </head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-secondary mb-3" type="button" onclick="history.back()">← Atrás</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-container">
+        <h2 class="form-title">Special Immigrant Juvenile Status (SIJ)</h2>
+        <h4>Estatus de Inmigrante Juvenil Especial</h4>
+
+<p>
+  La clasificación de Inmigrante Juvenil Especial (SIJ), por sus siglas en inglés) permite que ciertos
+  niños no ciudadanos soliciten el estatus de residente permanente legal en los Estados Unidos
+  (también conocido como solicitud de una Green Card).
+  Estos niños han estado sujetos a procedimientos judiciales estatales de menores relacionados con
+  el abuso, la negligencia, el abandono o una base similar según la ley estatal.
+  El Estatus Especial de Inmigrante Juvenil (SIJ, por sus siglas en inglés) es una forma para que los
+  jóvenes inmigrantes (menores de 21 años) obtengan un estatus legal en los Estados Unidos.
+  Es posible que califique para SIJS si:
+</p>
+
+<ul>
+  <li>Son Menores de 21 años </li>
+  <li>No está casado</li>
+  <li>Ya está en los EE. UU. y es indocumentado</li>
+  <li>Separado o lastimado por uno o ambos de sus padres</li>
+
+</ul>
+
+<span>SIJS le permite permanecer legalmente en los Estados Unidos. Con SIJS, puedes: </span>
+
+<ul>
+  <li>Solicitar una tarjeta verde (residencia permanente legal) </li>
+  <li> Solicitar autorización para trabajar </li>
+</ul>
+
+<h5>INTAKE</h5>
+
+<ol>
+  <li>Documentos de migración del Menor</li>
+  <li>Certificado de Nacimiento</li>
+  <li>Pasaporte Guardian</li>
+  <li>Pasaporte Menor </li>
+  <li>Cualquier Otro Documento Que Sirva De Prueba</li>
+</ol>
+
+<p>
+  Por favor diligencie la siguiente información COMPLETA Y CON LETRA
+  LEGIBLE: (! si la información no está completa puede presentar demoras para adelantar su
+  proceso!)
+</p>
+
+<form id="intake_specialjuvenil" name="intake_specialjuvenil" class="needs-validation" novalidate method="post"
+  action="<?= pubUrl ?>">
+
+
+
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre del menor</label>
+    <input id="nombre" name="nombre" class="form-control" placeholder="Nombre del Menor" required>
+  </div>
+
+
+  <div class="row">
+    <div class="col">
+      <label for="" class="form-label">Edad</label>
+      <input type="text" name="" id="" class="form-control" placeholder="Edad" >
+    </div>
+    <div class="col">
+      <label for="" class="form-label">Fecha de Nacimiento</label>
+      <input type="date" name="" id="" class="form-control" placeholder="Fecha Nacimiento" >
+    </div>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="nombreGuardian" class="form-label">Nombre del guardián</label>
+    <input id="nombreGuardian" name="nombreGuardian" class="form-control" placeholder="Nombre del guardián">
+  </div>
+  <div class="row">
+
+    <div class="col">
+      <label for="parentesco" class="form-label">Parentesco</label>
+      <input type="text"
+      id="parentesco" name="parentesco" class="form-control" placeholder="Parentesco">
+    </div>
+    <div class="col">
+
+      <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+      <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control" placeholder="Fecha de Nacimiento">
+
+    </div>
+
+  </div>
+  <div class="mb-3">
+    <label for="telefono" class="form-label">Teléfono</label>
+    <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Teléfono">
+
+  </div>
+  <div class="row">
+
+    <div class="col">
+      <label for="colorOjos" class="form-label">Color de ojos</label>
+      <input type="text" id="colorOjos" name="colorOjos" class="form-control" placeholder="Color de ojos">
+    </div>
+    <div class="col">
+      <label for="colorCabello" class="form-label">Color de cabello</label>
+      <input type="text" id="colorCabello" name="colorCabello" class="form-control" placeholder="Color de cabello">
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col">
+      <label for="peso" class="form-label">Peso</label>
+      <input type="text" id="peso" name="peso" class="form-control" placeholder="Peso">
+    </div>
+    <div class="col">
+      <label for="altura" class="form-label">Altura</label>
+      <input type="text" id="altura" name="altura" class="form-control" placeholder="Altura">
+    </div>
+
+  </div>
+
+  <div class="mb-3">
+    <label for="direccion" class="form-label">Dirección Actual Completa</label>
+    <input id="direccion" name="direccion" class="form-control" placeholder="Dirección Actual Completa" >
+  </div>
+
+
+
+  <hr>
+  <div class="mb-3">
+    <label for="nombrePadre" class="form-label">Nombre del Padre
+    </label>
+    <input type="text" id="nombrePadre" name="nombrePadre" class="form-control" placeholder="Nombre del Padre" >
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="ubicacionPadre" class="form-label">Ubicación
+    </label>
+      <input type="text" id="ubicacionPadre" name="ubicacionPadre" class="form-control" placeholder="Ubicación" >
+    </div>
+    <div class="col">
+      <label for="fechaNacimientoPadre" class="form-label"> Fecha de Nacimiento
+    </label>
+      <input type="date" id="fechaNacimientoPadre" name="fechaNacimientoPadre" class="form-control" placeholder="Fecha de Nacimiento" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="colorOjosPadre" class="form-label">Color de ojos
+    </label>
+      <input type="text" id="colorOjosPadre" name="colorOjosPadre" class="form-control" placeholder="Color de ojos" >
+    </div>
+    <div class="col">
+      <label for="colorCabelloPadre" class="form-label">Color de cabello
+    </label>
+      <input type="text" id="colorCabelloPadre" name="colorCabelloPadre" class="form-control" placeholder="Color de cabello" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="pesoPadre" class="form-label">Peso
+    </label>
+      <input type="text" id="pesoPadre" name="pesoPadre" class="form-control" placeholder="Peso" >
+    </div>
+    <div class="col">
+      <label for="alturaPadre" class="form-label">Altura
+    </label>
+      <input type="text" id="alturaPadre" name="alturaPadre" class="form-control" placeholder="Altura" >
+    </div>
+  </div>
+
+  <hr>
+
+
+  <div class="mb-3">
+    <label for="nombreMadre" class="form-label">Nombre del Madre
+    </label>
+    <input type="text" id="nombreMadre" name="nombreMadre" class="form-control" placeholder="Nombre del Madre" >
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="ubicacionMadre" class="form-label">Ubicación
+    </label>
+      <input type="text" id="ubicacionMadre" name="ubicacionMadre" class="form-control" placeholder="Ubicación" >
+    </div>
+    <div class="col">
+      <label for="fechaNacimientoMadre" class="form-label"> Fecha de Nacimiento
+    </label>
+      <input type="date" id="fechaNacimientoMadre" name="fechaNacimientoMadre" class="form-control" placeholder="Fecha de Nacimiento" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="colorOjosMadre" class="form-label">Color de ojos
+    </label>
+      <input type="text" id="colorOjosMadre" name="colorOjosMadre" class="form-control" placeholder="Color de ojos" >
+    </div>
+    <div class="col">
+      <label for="colorCabelloMadre" class="form-label">Color de cabello
+    </label>
+      <input type="text" id="colorCabelloMadre" name="colorCabelloMadre" class="form-control" placeholder="Color de cabello" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="pesoMadre" class="form-label">Peso
+    </label>
+      <input type="text" id="pesoMadre" name="pesoMadre" class="form-control" placeholder="Peso" >
+    </div>
+    <div class="col">
+      <label for="alturaMadre" class="form-label">Altura
+    </label>
+      <input type="text" id="alturaMadre" name="alturaMadre" class="form-control" placeholder="Altura" >
+    </div>
+  </div>
+
+
+
+  <hr>
+
+
+  <div class="mb-3">
+    <label>
+  Seleccione la opción con la que se identifica:    
+</label>
+    <select class="form-select" aria-label="Default select example">
+
+  <option value="1">Abandono de su padre/no lo 
+conoce</option>
+  <option value="2">Abandono de su madre/no lo 
+conoce</option>
+  <option value="3">Su padre va a renunciar a la
+  custodia- no está en el país</option>
+  <option value="3">Su madre va a renunciar a la
+  custodia- no está en el país</option>
+  <option value="3">Su padre va a renunciar a la
+  custodia- si está en el país</option>
+  <option value="3">Su madre va a renunciar a la
+  custodia- si está en el país</option>
+  <option value="3">Abuso/Negligencia del
+  Padre/Madre</option>
+</select>
+  </div>
+
+
+  <span><b>
+  Indique TODAS las direcciones en las que ha vivido EL MENOR durante los 
+últimos 21 años.
+</b></span>
+
+  <div class="mb-3">
+    <label for="direccionMenorActual" class="form-label">Dirección Actual Completa</label>
+    <input id="direccionMenorActual" name="direccionMenorActual" class="form-control" placeholder="Dirección Actual Completa" >
+    <span>Fecha Inicial (Mes /Dia/Año) Fecha Final (Mes /Dia/Año) </span>
+  </div>
+
+  <div class="mb-3">
+    <label for="direccionMenorAnt1" class="form-label">Dirección Anterior Completa</label>
+    <input id="direccionMenorAnt1" name="direccionMenorAnt1" class="form-control" placeholder="Dirección Actual Completa" >
+    <span>Fecha Inicial (Mes /Dia/Año) Fecha Final (Mes /Dia/Año) </span>
+  </div>
+
+  <div class="mb-3">
+    <label for="direccionMenorAnt2" class="form-label">Dirección Anterior Completa</label>
+    <input id="direccionMenorAnt2" name="direccionMenorAnt2" class="form-control" placeholder="Dirección Actual Completa" >
+    <span>Fecha Inicial (Mes /Dia/Año) Fecha Final (Mes /Dia/Año) </span>
+  </div>
+
+  <div class="mb-3">
+    <label for="direccionMenorAnt3" class="form-label">Dirección Anterior Completa</label>
+    <input id="direccionMenorAnt3" name="direccionMenorAnt3" class="form-control" placeholder="Dirección Actual Completa" >
+    <span>Fecha Inicial (Mes /Dia/Año) Fecha Final (Mes /Dia/Año) </span>
+  </div>
+
+
+  <div class="row">
+    <div class="col">
+    <label class="form-label" for="cuidadorNombre1">Nombre de la persona</label>
+    <input id="cuidadorNombre1" name="cuidadorNombre1" class="form-control" placeholder="Nombre de la persona">
+    </div>
+    <div class="col">
+    <label class="form-label" for="nacimientoCuidador1">Fecha de nacimiento</label>
+    <input id="nacimientoCuidador1" name="nacimientoCuidador1" class="form-control" placeholder="Fecha de nacimiento">
+    </div>
+    <div class="col">
+    <label class="form-label" for="relacionCuidador1">Relacion con el menor</label>
+    <input id="relacionCuidador1" name="relacionCuidador1" class="form-control" placeholder="Relacion con el menor">
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="direccionCuidador1">Persona 1 Dirección Actual Completa</label>
+    <input class="form-control" name="direccionCuidador1" id="direccionCuidador1" placeholder="Direccion">
+  </div>
+
+
+
+
+
+  <hr>
+  <span><b>
+  Información adicional
+  </b>
+</span>
+
+
+  <div class="mb-3">
+
+    <div class="form-check">
+      <label for="casados" class="form-check-label">Los padres del menor estuvieron casados</label>
+      <input type="checkbox" class="form-check-input" name="casados" id="casados">
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="" class="form-label">Fecha Inicial</label>
+      <input type="date" id="" name="" placeholder="" class="form-control" >
+    </div>
+    <div class="col">
+
+      <label for="" class="form-label">Fecha Final</label>
+      <input type="date" id="" name="" placeholder="" class="form-control" >
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col">
+
+      <label for="" class="form-label">Pais de matrimonio</label>
+      <input type="text" id="" name="" placeholder="" class="form-control" >
+    </div>
+    <div class="col">
+
+      <label for="" class="form-label">Pais de Divorcio</label>
+      <input type="text" id="" name="" placeholder="" class="form-control" >
+    </div>
+  </div>
+
+
+
+  <div class="mb-3">
+    <label for="" class="form-label">
+¿Porque cree que usted es la mejor persona para ser guardián del menor?</label>
+    <textarea class="form-control" id="" name="" rows="3"></textarea>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="" class="form-label">
+¿Porque cree que el padre o madre no pueden ser los tutores del menor?</label>
+    <textarea class="form-control" id="" name="" rows="3"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="observaciones" class="form-label">Observaciones</label>
+    <textarea class="form-control" id="observaciones" name="observaciones" rows="3"></textarea>
+  </div>
+
+
+
+
+
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+
+</form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    >    </script>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>¿Necesitas ayuda con tu formulario?</p>
+                    <p>📧 Email: info@daniaformularios.com</p>
+                    <p>📞 Teléfono: (555) 123-4567</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Síguenos en Redes Sociales</h5>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Dania Formularios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

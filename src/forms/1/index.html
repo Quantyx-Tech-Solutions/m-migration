@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intake o Formulario para el Llenado de I-765 Solicitud de Autorización de Empleo </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 40px;
+        }
+        .form-title {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .form-section h4 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .form-control, .form-select {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        .required-docs {
+            background-color: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .required-docs h5 {
+            color: #0c5460;
+            margin-bottom: 15px;
+        }
+        .required-docs ol {
+            margin-bottom: 0;
+        }
+        .required-docs li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-secondary mb-3" type="button" onclick="history.back()">← Atrás</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-container">
+        <h2 class="form-title">Intake o Formulario para el Llenado de I-765 Solicitud de Autorización de Empleo</h2>
+        <form id="intake_765" name="intake_765" class="needs-validation" novalidate method="post" action="<?= pubUrl ?>">
+
+      <div class="mb-3">
+        <label for="nombreCompleto" class="form-label" > Nombre completo del solicitante *
+          </label>
+        <input type="text" name="nombreCompleto" id="nombreCompleto" class="form-control" placeholder="Nombre Completo" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="numeroA" class="form-label" > Numero A
+          </label>
+        <input type="text" name="numeroA" id="numeroA" class="form-control" placeholder="Numero A" required>
+      </div>
+
+      <div class="mb-3">
+
+        <label for="direccionActual" class="form-label" > Dirección actual
+          </label>
+        <input type="text" name="direccionActual" id="direccionActual" class="form-control" placeholder="Dirección actual" required>
+
+
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <label for="codPostal" class="form-label" > Codigo Postal
+          </label>
+          <input type="number" name="codPostal" id="codPostal" class="form-control" placeholder="Codigo Postal" required>
+        </div>
+
+        <div class="col">
+          <label for="numeroTelefono" class="form-label" > Numero Telefono
+          </label>
+          <input type="number" name="numeroTelefono" id="numeroTelefono" class="form-control" placeholder="Numero Telefono" required>
+        </div>
+
+
+
+      </div>
+
+      <div class="row">
+
+        <div class="col">
+          <label for="nombrePadre" class="form-label" > Nombre Padre
+          </label>
+          <input type="text" name="nombrePadre" id="nombrePadre" class="form-control" placeholder="Nombre Padre" required>
+
+        </div>
+
+        <div class="col">
+          <label for="nombreMadre" class="form-label" > Nombre Madre
+          </label>
+          <input type="text" name="nombreMadre" id="nombreMadre" class="form-control" placeholder="Nombre Madre" required>
+        </div>
+
+      </div>
+
+      <hr>
+      <div class="mb-3">
+
+        <div class="form-check">
+        <label for="antecedentes" class="form-check-label">¿Tiene antecedentes penales?</label>
+        <input type="checkbox" class="form-check-input" name="antecedentes" id="antecedentes">
+        </div>
+         
+
+
+
+      </div>
+      <div class="mb-3">
+        <label for="txtPenales" class="form-label">Explique brevemente:</label>
+        <textarea class="form-control" id="txtPenales" name="txtPenales" rows="3"></textarea>
+      </div>
+
+
+
+      <button class="btn btn-primary" type="submit">Enviar</button>
+      <hr>
+        <div class="required-docs">
+            <h5>DOCUMENTOS REQUERIDOS:</h5>
+            <ol>
+                <li>ID válido con foto (pasaporte, licencia, ID consular, etc.)</li>
+                <li>Copia de documentos migratorios (I-94, carta de asilo, notificación de USCIS, etc.)</li>
+                <li>Una (1) foto digital tipo pasaporte, con las siguientes especificaciones:</li>
+            </ol>
+            <h6>REQUISITOS DE LA FOTO DIGITAL</h6>
+            <ul>
+                <li>Color (no blanco y negro)</li>
+                <li>Tomada en los últimos 6 meses</li>
+                <li>Fondo blanco, sin sombras</li>
+                <li>Cara centrada, vista frontal, expresión neutral, ojos abiertos</li>
+                <li>Sin lentes, salvo razones médicas con constancia firmada por un doctor</li>
+                <li>Sin sombreros, audífonos o accesorios (excepto uso religioso diario)</li>
+                <li>Ropa de uso diario, sin uniformes (salvo religiosos)</li>
+                <li>No se aceptan fotos escaneadas de documentos ni tomadas con filtros, apps, revistas o de cuerpo completo</li>
+            </ul>
+        </div>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>¿Necesitas ayuda con tu formulario?</p>
+                    <p>📧 Email: info@daniaformularios.com</p>
+                    <p>📞 Teléfono: (555) 123-4567</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Síguenos en Redes Sociales</h5>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="#" class="btn btn-outline-light me-2 mb-2">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Dania Formularios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
